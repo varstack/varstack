@@ -1,0 +1,18 @@
+{
+  "arrowParens": "always",
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "<THIRD_PARTY_MODULES>",
+    "^~/(.*)$",
+    "^[./]",
+    "<TYPES>"
+  ],
+  "plugins": [
+    "prettier-plugin-imports",
+    "prettier-plugin-jsdoc",
+    "prettier-plugin-pkg"
+  ],
+  "printWidth": 80,
+  "semi": true,
+  "tabWidth": 2
+}
