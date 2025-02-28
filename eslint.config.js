@@ -1,10 +1,10 @@
-import js from '@eslint/js';
-import prettier from 'eslint-config-prettier';
-import onlyWarn from 'eslint-plugin-only-warn';
-import tseslint from 'typescript-eslint';
+const js = require('@eslint/js');
+const prettier = require('eslint-config-prettier');
+const onlyWarn = require('eslint-plugin-only-warn');
+const tseslint = require('typescript-eslint');
 
 /** @type {import('eslint').Linter.Config} */
-const config = [
+module.exports = [
   js.configs.recommended,
   prettier,
   ...tseslint.configs.recommended,
@@ -30,5 +30,3 @@ const config = [
     ignores: ['**/*/dist/**'],
   },
 ];
-
-export default config;

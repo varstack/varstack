@@ -3,6 +3,7 @@
   "ui": "tui",
   "tasks": {
     "build": { "dependsOn": ["^build"], "outputs": ["dist"] },
+    "clean": { "cache": false, "outputs": [] },
     "dev": { "cache": false, "persistent": true },
     "lint": { "outputs": [] }
   }

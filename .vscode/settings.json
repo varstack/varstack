@@ -1,6 +1,7 @@
 {
   "editor.formatOnSave": true,
   "explorer.sortOrder": "type",
+  "typescript.tsdk": "node_modules/typescript/lib",
   // eslint for monorepo
   "eslint.workingDirectories": [{ "mode": "auto" }],
   // file nesting
