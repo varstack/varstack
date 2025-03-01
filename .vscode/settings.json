@@ -12,8 +12,6 @@
     "*.js": "",
     "*.ts": ","
   },
-  // prettier-ignore
-  "cSpell.words": [
-    "varstack","webp","zod","shiki",
-  ]
+  "cSpell.language": "en-gb",
+  "cSpell.words": ["varstack", "webp", "zod", "shiki"]
 }
