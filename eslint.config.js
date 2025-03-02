@@ -27,6 +27,6 @@ module.exports = [
     },
   },
   {
-    ignores: ['**/*/dist/**'],
+    ignores: ['**/*/dist/**', '**/*.js'],
   },
 ];

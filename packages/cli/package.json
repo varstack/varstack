@@ -1,0 +1,42 @@
+{
+  "name": "@varstack/cli",
+  "version": "0.0.0",
+  "type": "commonjs",
+  "displayName": "varstack",
+  "description": "Manage package versioning, changelog, and publishing with ease",
+  "author": {
+    "name": "Avirup Ghosh",
+    "url": "https://github.com/oviirup"
+  },
+  "license": "MIT",
+  "bin": {
+    "varstack": "./dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "scripts": {
+    "build": "bunchee -m --no-sourcemap",
+    "clean": "npx rimraf node_modules dist .turbo",
+    "dev": "bunchee -w",
+    "lint": "eslint src/*"
+  },
+  "dependencies": {
+    "commander": "~13.1.0",
+    "inquirer": "~12.4.2",
+    "picocolors": "~1.1.1"
+  },
+  "devDependencies": {
+    "bunchee": "~6.4.0"
+  }
+}
