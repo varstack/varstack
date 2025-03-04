@@ -1,0 +1,36 @@
+{
+  "name": "@varstack/types",
+  "version": "0.0.0",
+  "description": "Common type definitions shared between varstack packages",
+  "author": {
+    "name": "Avirup Ghosh",
+    "url": "https://github.com/oviirup"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "scripts": {
+    "build": "bunchee -m --no-sourcemap",
+    "clean": "npx rimraf node_modules dist .turbo",
+    "dev": "bunchee -w",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "bunchee": "~6.5.0",
+    "typescript": "~5.8.2"
+  }
+}
