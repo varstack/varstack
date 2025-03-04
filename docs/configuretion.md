@@ -16,8 +16,6 @@ By default when you run `varstack init` it will create a configuration file as f
 version: 0.0.1
 changelog: true
 commit: false
-fixed: []
-linked: []
 ignore: []
 access: restricted
 branches:
@@ -65,7 +63,7 @@ commit:
   # name of the package or path to the file
   uses: '@varstack/cli/commit'
   # options for the generator function
-  opts: { 'skipCI': 'version' }
+  with: { 'skipCI': 'version' }
 ```
 
 Or, you can only use the package name with default options
@@ -95,7 +93,7 @@ By default, npm publishes scoped npm packages as restricted - so to ensure you d
 
 You can _override_ the behaviour from `package.json` - publishConfig option.
 
-```jsonc
+```json
 "publishConfig": {
   "registry": "https://registry.npmjs.org/",
   "access": "public"

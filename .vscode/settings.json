@@ -10,7 +10,7 @@
   "explorer.fileNesting.patterns": {
     "package.json": ".nvmrc, .npm*, bun.lockb, pnpm*",
     "*.js": "",
-    "*.ts": ","
+    "*.ts": "$(capture).*.ts, $(capture).js, $(capture).*.js, $(capture).mjs, $(capture).*.mjs"
   },
   "cSpell.language": "en-gb",
   "cSpell.words": ["varstack", "webp", "zod", "shiki"]
