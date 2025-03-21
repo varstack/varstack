@@ -1,23 +1,20 @@
 {
-  "name": "@varstack/cli",
+  "name": "@varstack/config",
   "version": "0.0.0",
-  "displayName": "varstack",
-  "description": "Manage package versioning, changelog, and publishing with ease",
+  "description": "Utilities for reading and parsing varstack config",
   "author": {
     "name": "Avirup Ghosh",
     "url": "https://github.com/oviirup"
   },
   "license": "MIT",
-  "bin": {
-    "varstack": "./dist/bin.js"
-  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "default": "./dist/index.js"
     }
   },
   "files": [
@@ -32,9 +29,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "commander": "~13.1.0",
-    "inquirer": "~12.5.0",
-    "picocolors": "~1.1.1"
+    "@varstack/types": "workspace:*",
+    "picocolors": "~1.1.1",
+    "yaml": "~2.7.0"
   },
   "devDependencies": {
     "bunchee": "~6.5.0"

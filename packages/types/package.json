@@ -30,7 +30,6 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "bunchee": "~6.5.0",
-    "typescript": "~5.8.2"
+    "bunchee": "~6.5.0"
   }
 }
