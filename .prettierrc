@@ -12,9 +12,10 @@
   "plugins": [
     "prettier-plugin-imports",
     "prettier-plugin-pkg",
-    "prettier-plugin-tailwindcss"
+    "prettier-plugin-jsdoc"
   ],
   "printWidth": 80,
+  "quoteProps": "consistent",
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,

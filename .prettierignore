@@ -1,7 +1,3 @@
-# minified files
-*.min.js
-*.min.ts
-
 # package lock files
 pnpm-lock.yaml
 package-lock.json
@@ -9,6 +5,9 @@ bun.lock
 yarn.lock
 
 # miscellaneous
+schema.json
+*.min.*
 *.log
 .DS_Store
 .pnp.*
+.husky
