@@ -2,7 +2,8 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
 
 permissions:
@@ -15,24 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: |
-          pnpm run build
-          pnpm run typecheck
-
+      - run: pnpm run types:check
   check-format:
     name: 🧪 check formatting
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: |
-          pnpm run format:check
-
+      - run: pnpm run format:check
   lint:
     name: 🧪 run eslint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: |
-          pnpm run lint
+      - run: pnpm run lint

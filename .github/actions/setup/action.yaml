@@ -1,6 +1,10 @@
 name: Setup
 description: Setup CI environment with pnpm cache
 inputs:
+  pnpm-version:
+    description: Version of pnpm to install. Eg. 10.x, 11.x etc
+    default: 10.x
+    required: false
   node-version:
     description: Version of node.js to install. Eg. 18.x, 21.7.4 etc
     default: 22.x
@@ -13,7 +17,7 @@ runs:
     - uses: 🟡 pnpm/action-setup@v4
       name: Install pnpm
       with:
-        version: 10
+        version: ${{ inputs.pnpm-version }}
         run_install: false
     - name: 🟢 Install Node.js
       uses: actions/setup-node@v4

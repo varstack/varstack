@@ -1,10 +1,17 @@
 {
   "recommendations": [
+    // linting & formatting
     "esbenp.prettier-vscode",
-    "aaron-bond.better-comments",
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    // testing
     "vitest.explorer",
-    "timgthomas.explorer-gitignore",
+    // github
     "github.vscode-github-actions",
-    "streetsidesoftware.code-spell-checker"
+    "github.vscode-pull-request-github",
+    // other
+    "aaron-bond.better-comments",
+    "timgthomas.explorer-gitignore",
+    "dbaeumer.vscode-eslint"
   ]
 }
