@@ -4,14 +4,14 @@
 node_modules
 dist
 
-# temporary files
-*.temp.*
-*.bkp
-
 # debug
 *-debug.log*
 *-error.log*
 
 # local env files
 .env*
-~.env.example
+!.env.example
+
+# miscellaneous
+*.tsbuildinfo
+*.tgz
