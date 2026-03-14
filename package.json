@@ -7,9 +7,14 @@
   "author": "Avirup Ghosh (github.com/oviirup)",
   "type": "module",
   "bin": "./dist/bin.js",
+  "exports": {
+    ".": "./dist/bin.js",
+    "./package.json": "./package.json",
+    "./schema.json": "./schema.json"
+  },
   "scripts": {
-    "build": "tsdown --minify",
-    "dev": "tsdown --watch",
+    "build": "bunx --bun tsdown --minify",
+    "dev": "bunx --bun tsdown --watch",
     "format": "biome format --write",
     "lint": "biome check",
     "prepare": "lefthook install",
@@ -18,14 +23,14 @@
   },
   "dependencies": {
     "commander": "^14.0.3",
-    "enquirer": "^2.4.1"
+    "enquirer": "^2.4.1",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.6",
+    "@biomejs/biome": "^2.4.7",
     "@types/bun": "^1.3.10",
-    "lefthook": "^2.1.3",
+    "lefthook": "^2.1.4",
     "tsdown": "^0.20.3",
-    "typescript": "^5.9.3",
-    "zod": "^4.3.6"
+    "typescript": "^5.9.3"
   }
 }
