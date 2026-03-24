@@ -8,7 +8,7 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**/*", "!*.min.*"]
+    "includes": ["**/*", "!**/*.min.*", "schema.json"]
   },
   "formatter": {
     "enabled": true,

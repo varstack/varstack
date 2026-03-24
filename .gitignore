@@ -1,6 +1,7 @@
 # repository
 .vercel
 .turbo
+schema.json
 node_modules
 dist
 

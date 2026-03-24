@@ -1,3 +1,5 @@
+import { Awaitable } from "@/types";
+
 /**
  * Wraps a promise or function and returns a result object with discriminated union
  * @param input A promise or function that returns a promise/value
@@ -5,7 +7,7 @@
  * @category promise
  */
 export async function tryCatch<T, E = Error>(
-  input: Promise<T> | (() => Bun.MaybePromise<T>),
+  input: Promise<T> | (() => Awaitable<T>),
 ) {
   try {
     const value: T = typeof input === "function" ? await input() : await input;

@@ -1,8 +1,8 @@
 /**
  * A recreation of the picocolors library for use in the varstack project.
+ *
  * @package picocolors
  * @version 1.1.1
- * @license ISC
  * @repository https://github.com/alexeyraspopov/picocolors
  */
 
