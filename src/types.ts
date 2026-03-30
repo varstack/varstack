@@ -37,7 +37,24 @@ export type BranchConfig = {
   [branch: string]: string;
 };
 
+export type ModuleConfig = {
+  /** Module name or path relative to root */
+  using: string;
+  /** Arguments to pass to the module function */
+  with?: unknown;
+};
+
 export type UserConfig = {
+  /**
+   * Module configuration to generate the changelog file
+   * @default null
+   */
+  changelog?: ModuleConfig | null | false;
+  /**
+   * Module configuration to generate the changelog file
+   * @default null
+   */
+  commit?: ModuleConfig | null | false;
   /**
    * Whether to publish the package as public or restricted. Defaults to "public".*
    * @default "restricted"
