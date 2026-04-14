@@ -1,4 +1,4 @@
-import { format } from "util";
+import { format } from "node:util";
 import { pc } from "@/lib/picocolors.js";
 
 function tag(msgs: any[], prefix?: string) {
@@ -12,8 +12,8 @@ function tag(msgs: any[], prefix?: string) {
 
 export const logger = {
   log: (...args: any[]) => console.log(tag(args)),
-  error: (...args: any[]) => console.error(tag(args, pc.red`error:`)),
-  warn: (...args: any[]) => console.warn(tag(args, pc.yellow`warn:`)),
-  info: (...args: any[]) => console.info(tag(args, pc.blue`info:`)),
-  success: (...args: any[]) => console.info(tag(args, pc.green`success:`)),
+  error: (...args: any[]) => console.error(tag(args, pc.red`✖`)),
+  warn: (...args: any[]) => console.warn(tag(args, pc.yellow`▲`)),
+  info: (...args: any[]) => console.info(tag(args, pc.blue`✔`)),
+  success: (...args: any[]) => console.info(tag(args, pc.green`✔`)),
 };
