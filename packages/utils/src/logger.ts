@@ -1,5 +1,5 @@
 import { format } from "node:util";
-import { pc } from "@/lib/picocolors.js";
+import { pc } from "./picocolors";
 
 function tag(msgs: any[], prefix?: string) {
   let pre = "🍀 ";

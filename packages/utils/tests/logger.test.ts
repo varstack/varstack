@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, mock } from "bun:test";
-import { logger } from "@/lib/logger";
+import { logger } from "../src/logger";
 
 type ConsoleMethod = "log" | "error" | "warn" | "info";
 

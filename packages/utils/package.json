@@ -1,0 +1,18 @@
+{
+  "name": "@varstack/utils",
+  "version": "0.0.0",
+  "description": "Utility function to be used across varstack packages",
+  "repository": "https://github.com/varstack/varstack",
+  "type": "module",
+  "exports": {
+    "./logger": "./dist/logger.js",
+    "./picocolors": "./dist/picocolors.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsdown src/**/*.ts --exports --dts --no-fixed-extension --minify",
+    "dev": "tsdown src/**/*.ts --exports --dts --no-fixed-extension --watch",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  }
+}

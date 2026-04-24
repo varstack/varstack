@@ -15,15 +15,12 @@ const isEnabled =
   (!!env.FORCE_COLOR ||
     argv.includes("--color") ||
     p.platform === "win32" ||
-    ((p.stdout || {}).isTTY && env.TERM !== "dumb") ||
+    (p.stdout?.isTTY && env.TERM !== "dumb") ||
     !!env.CI);
 
 /** Function wrapper to allow for both normal and tagged template usage */
 function wrapTemplateString<T>(cb: (input: string) => T) {
-  return function (
-    input: TemplateStringsArray | string,
-    ...args: unknown[]
-  ): T {
+  return (input: TemplateStringsArray | string, ...args: unknown[]): T => {
     if (Array.isArray(input) && "raw" in input) {
       let str = input[0];
       let i = 0;
@@ -37,8 +34,8 @@ function wrapTemplateString<T>(cb: (input: string) => T) {
 function formatter(open: string, close: string, replace: string = open) {
   const format = (input: string): string => {
     if (!isEnabled) return String(input);
-    let string = String(input);
-    let index = string.indexOf(close, open.length);
+    const string = String(input);
+    const index = string.indexOf(close, open.length);
     return ~index
       ? open + replaceClose(string, close, replace, index) + close
       : open + string + close;

@@ -1,20 +1,14 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "esModuleInterop": true,
-    "lib": ["esnext", "dom", "dom.iterable"],
+    "lib": ["esnext"],
     "module": "esnext",
+    "moduleDetection": "force",
     "moduleResolution": "bundler",
-    "noEmit": true,
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/scripts/*": ["./scripts/*"]
-    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2020",
-    "types": ["node", "bun"]
-  },
-  "exclude": ["node_modules", "dist"],
-  "include": ["**/*.ts", "tests/**/*.ts"]
+    "target": "ES2021",
+    "types": ["bun", "node"]
+  }
 }
